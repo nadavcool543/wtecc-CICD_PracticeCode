@@ -1,0 +1,18 @@
+name: Nadav's CI workflow
+
+# events that trigger the workflow
+on: 
+  push: 
+    branches: [ "main" ]
+  pull_request: 
+    branches: [ "main" ]
+
+# jobs that will run as part of the workflow
+# build is the name of the job
+# runner is the machine it runs on
+jobs: 
+  build: 
+    runs-on: ubuntu-latest
+    container: python:3.9-slim
+
+
